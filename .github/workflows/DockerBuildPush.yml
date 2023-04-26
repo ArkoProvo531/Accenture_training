@@ -12,8 +12,10 @@ jobs:
         run: curl -fsSL https://get.docker.com | sh 
       - name: docker login 
         run: docker login -u ${{secrets.DOCKERHUBUSERNAME}} -p ${{secrets.DOCKERHUBPASSWORD}}
+      - name: current directory
+        run: pwd && ls -la
       - name: docker build 
-        run: docker build . -t python-arkoapi:latest
+        run: cd Accenture_training && docker build . -t python-arkoapi:latest
       - name: test
         run: echo "hello"
       - name: docker tag & push  
