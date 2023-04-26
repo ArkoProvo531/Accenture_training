@@ -13,11 +13,11 @@ jobs:
       - name: docker login 
         run: docker login -u ${{secrets.DOCKERHUBUSERNAME}} -p ${{secrets.DOCKERHUBPASSWORD}}
       - name: docker build 
-        run: docker build . -t python_arko_api:latest
+        run: docker build . -t python-arkoapi:latest
       - name: test
         run: echo "hello"
       - name: docker tag & push  
-        run: docker tag python_arko_api:latest 1001arko/training123:latest && docker push 1001arko/training123:latest
+        run: docker tag python-arkoapi:latest 1001arko/training123:latest && docker push 1001arko/training123:latest
         
       - name: login Target Server
         uses: appleboy/ssh-action@v0.1.10
