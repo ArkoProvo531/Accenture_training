@@ -13,7 +13,7 @@ jobs:
       - name: docker login 
         run: docker login -u ${{secrets.DOCKERHUBUSERNAME}} -p ${{secrets.DOCKERHUBPASSWORD}}
       - name: docker build 
-        run: cd testenv && docker build . -t python_arko_api:latest
+        run: docker build . -t python_arko_api:latest
       - name: test
         run: echo "hello"
       - name: docker tag & push  
