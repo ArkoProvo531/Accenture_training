@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "example" {
-  name                     = "shubham.dz.kumar"
+  name                     = "arko-roy"
   resource_group_name      = "github"
   location                 = "West Europe"
   account_tier             = "Standard"
