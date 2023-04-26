@@ -4,7 +4,7 @@ on:
 jobs:
   Buildandpushdocker:
     runs-on: ubuntu-latest
-    environment: Dev
+    environment: DockerProd
     steps:
       - name: gitclone 
         run: git clone https://github.com/ArkoProvo531/Accenture_training.git
